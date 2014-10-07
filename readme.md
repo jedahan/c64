@@ -1,6 +1,2 @@
-Install [vice](vice64.sf.net).
-
-    make
-    make run
-
-:)
+1. Install [vice](vice64.sf.net), then `make run`
+2. :)
