@@ -1,15 +1,13 @@
-NAME = 10print
+NAME = escape
 
 CC = petcat
 CFLAGS = -w2
 
 all: $(NAME).prg
+	@x64 $(NAME).prg
 
 %.prg: %.bas
-	$(CC) $(CFLAGS) -o $@ $(NAME).bas
-
-run: $(NAME).prg
-	@x64 $(NAME).prg
+	$(CC) $(CFLAGS) -o $@ -- $<
 
 clean:
 	@rm -f $(NAME).prg
