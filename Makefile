@@ -1,4 +1,4 @@
-NAME = escape
+NAME = postcard
 
 CC = petcat
 CFLAGS = -w2
