@@ -17,13 +17,45 @@
 220 goto 900
 
 300 rem start_program:
-305 print chr$(147);: rem clear the screen
-310 poke 53281,0
-320 print "OMG WE ARE LOCKED AND LOADED"
-330 input "whats your favorite number 0-16"; a1%
-340 if a1% > 16 or a1% < 0 then goto 330
-350 poke 646,a1%
-360 goto 1000
+305 c=0
+310 print chr$(147);: rem clear the screen
+315 poke 53281,c
+
+400 rem questions:
+405 print ""
+410 print "welcome to the interface experience"
+411 print "exhibition at the bgc gallery"
+412 print ""
+413 print "you get to be the exhibition designer today!"
+415 print ""
+420 print "press f1 to change the wall color"
+430 print "      f2 to change the title"
+440 print "      f3 to change the star object"
+450 print "      f4 to exit"
+
+460 get a$:if a$="" then 460
+465 if a$<>chr$(133) then 460
+
+500 rem change_color:
+510 c=c + 1
+520 if c = 16 then c=0
+540 goto 310
+
+600 rem change_title:
+
+700 rem change_description:
+720 input "What color would like the walls to be"; color$
+730 input "What object would you like to be the star of the exhibition"; object$
+740 print "Great choice!"
+750 input "Would you like to write the label for this object or have someone else do it"; me$
+760 if me$ = "" then 490
+770 print "Okay."
+780 input "What should the label read"; label$
+790 input "What would you like the title of your show to be"; title$
+
+810 print "That sounds great! Press to F1 to view your show!"
+820 wait
+830 print "Great show!"
 
 900 rem help:
 910 print "try load ps,8"
