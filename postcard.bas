@@ -34,12 +34,27 @@
 450 print "      f4 to exit"
 
 460 get a$:if a$="" then 460
-465 if a$<>chr$(133) then 460
+461 if a$=chr$(133) then 500 end
+462 if a$=chr$(137) then 600 end
+463 if a$=chr$(134) then 700 end
+464 if a$=chr$(138) then 800 end
+465 goto 460
 
 500 rem change_color:
 510 c=c + 1
 520 if c = 16 then c=0
 540 goto 310
+
+800 rem make_sound:
+810 for l=54272 to 54296:poke l,0:next
+820 poke 54296,15
+830 poke 54277,64
+840 poke 54273,162:poke 54272,37
+850 poke 54276,17:for t=1 to 200:next
+860 poke 54276,16:for t=1 to 50:next
+870 print "press any key to stop"
+880 get a$:if a$="" then 890
+890 goto 300
 
 600 rem change_title:
 
