@@ -7,3 +7,4 @@ You can also try `make 10print.prg && x64 10print.prg`
 
 1. line numbers are mandatory
 2. no labels, just goto line#
+3. type it all in lowercase
