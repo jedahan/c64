@@ -29,9 +29,9 @@
 413 print "you get to be the exhibition designer today!"
 415 print ""
 420 print "press f1 to change the wall color"
-430 print "      f2 to change the title"
+430 print "      f2 to reset"
 440 print "      f3 to change the star object"
-450 print "      f4 to exit"
+450 print "      f4 to beep"
 
 460 get a$:if a$="" then 460
 461 if a$=chr$(133) then 500 end
