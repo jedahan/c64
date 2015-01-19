@@ -1,4 +1,4 @@
-NAME = postcard
+NAME = bgc
 
 CC = petcat
 CFLAGS = -w2
@@ -11,5 +11,8 @@ all: $(NAME).prg
 
 clean:
 	@rm -f $(NAME).prg
+
+test: 10print.prg
+	@x64 10print.prg
 
 .PHONY: all clean

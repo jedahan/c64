@@ -1,7 +1,6 @@
-1. Install [vice](vice64.sf.net), then `make`
-2. :)
-
-You can also try `make 10print.prg && x64 10print.prg`
+1. Install [vice](vice64.sf.net)
+2. 'make test' to make sure everything is working
+3. 'make' to test out the bgc experience
 
 ### notes
 
