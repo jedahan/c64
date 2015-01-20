@@ -58,12 +58,14 @@
 640 return
 
 700 rem make_sound:
-710 for l=54272 to 54296:poke l,0:next
-720 poke 54296,15
-730 poke 54277,64
-740 poke 54273,162:poke 54272,37
-750 poke 54276,17:for t=1 to 200:next
-760 poke 54276,16:for t=1 to 50:next
+710 sid=54272
+720 for l = sid to sid+24: poke l,0: next: rem duration of note
+730 poke sid+24,15: rem volume
+740 poke sid+5,64: rem attack/decay
+750 poke sid+6,248: rem sustain/release
+760 poke sid+1,17: poke sid,37: rem freq voice 1
+770 poke sid+4,17: for t = 1 to 200: next: rem frequency plus delay
+780 poke sid+4,16: for t = 1 to 50: next: rem settings off plus delay
 790 return
 
 800 rem change_description:
