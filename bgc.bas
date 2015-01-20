@@ -103,12 +103,17 @@
 923 print ""
 924 print "  f1 bg    f2 fg    f3 beep    f4 exit  ";
 
-960 get a$:if a$="" then 960
+950 time$="000000": rem set the timer to 0
+960 get a$:if a$="" then gosub 1000 end: rem check_timer
 961 if a$=chr$(133) then gosub 500 end: rem change_color
 962 if a$=chr$(137) then gosub 600 end: goto 900: rem change_text
 963 if a$=chr$(134) then gosub 700 end: rem beep
 964 if a$=chr$(138) then 00 end: rem start
 965 if a$=chr$(13) then gosub 800 end
 966 goto 960
+
+1000 rem check_timer
+1010 if ti$ > "000020" then 00 end: rem start
+1020 return
 
 end
