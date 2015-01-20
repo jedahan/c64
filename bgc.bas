@@ -43,7 +43,7 @@
 463 if a$=chr$(134) then gosub 700 end: rem beep
 464 if a$=chr$(138) then 00 end: rem start
 465 if a$=chr$(13) then gosub 800 end
-466 goto 470
+466 goto 460
 
 500 rem change_color:
 510 c=c + 1
@@ -68,16 +68,45 @@
 
 800 rem change_description:
 805 print ""
-810 input "what is your show title"; t1$
+810 input "what is your show title"; a1$
 820 print "great choice!"
-830 input "what should the label read"; l1$
+830 input "what should the label read"; b1$
 840 print "sounds intriguing!"
 
+888 a=int((40-10-len(a1$)) / 2)
+889 b=int((40-10-len(b1$)) / 2)
 900 print chr$(147);: rem clear the screen
-910 print ""
-920 print ""
-930 print ""
-940 print t1$
-950 print ""
-960 print l1$
+901 print "UEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEDI  ";
+902 print "HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEH H H";
+903 print "H HEUEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEH H H";
+904 print "H H H                              H H H";
+905 print "H H H                              H H H";
+906 print "H H H                              H H H";
+907 print "H H H                              H H H";
+908 print "H H H" spc(a) a1$ spc(a)          "H H H";
+909 print "H H H                              H H H";
+910 print "H H H                              H H H";
+911 print "H H H                              H H H";
+912 print "H H H                              H H H";
+913 print "H H H" spc(b) b1$ spc(b)          "H H H";
+914 print "H H H                              H H H";
+915 print "H H H                              H H H";
+916 print "H H H                              H H H";
+917 print "H H H                              H H H";
+918 print "H H H                              H H H";
+919 print "H H H                              H H H";
+920 print "H H HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEHEH H";
+921 print "H H HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEH";
+922 print "JCEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEK";
+923 print ""
+924 print "  f1 bg    f2 fg    f3 beep    f4 exit  ";
+
+960 get a$:if a$="" then 960
+961 if a$=chr$(133) then gosub 500 end: rem change_color
+962 if a$=chr$(137) then gosub 600 end: goto 900: rem change_text
+963 if a$=chr$(134) then gosub 700 end: rem beep
+964 if a$=chr$(138) then 00 end: rem start
+965 if a$=chr$(13) then gosub 800 end
+966 goto 960
+
 end
