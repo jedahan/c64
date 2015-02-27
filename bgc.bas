@@ -35,7 +35,7 @@
 417 print "      f3 to beep"
 418 print "      f4 to reset"
 419 print ""
-420 print "press enter to continue designing!"
+420 print "press return to continue designing!"
 
 460 get a$:if a$="" then 460
 461 if a$=chr$(133) then gosub 500 end: rem change_color
