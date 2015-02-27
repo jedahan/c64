@@ -111,7 +111,7 @@
 962 if a$=chr$(137) then gosub 600 end: goto 900: rem change_text
 963 if a$=chr$(134) then gosub 700 end: rem beep
 964 if a$=chr$(138) then 00 end: rem start
-965 if a$=chr$(13) then gosub 800 end
+965 if a$=chr$(13) then print chr$(147);: gosub 800 end
 966 goto 960
 
 1000 rem check_timer
