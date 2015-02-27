@@ -75,8 +75,10 @@
 830 input "what should the label read"; b1$
 840 print "sounds intriguing!"
 
-888 a=int((40-10-len(a1$)) / 2)
-889 b=int((40-10-len(b1$)) / 2)
+850 a=int(((40-10-len(a1$)) / 2) + 0.5)
+860 b=int(((40-10-len(a1$)) / 2) )
+870 c=int(((40-10-len(b1$)) / 2) + 0.5)
+880 d=int(((40-10-len(b1$)) / 2) )
 900 print chr$(147);: rem clear the screen
 901 print "UEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEDI  ";
 902 print "HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEH H H";
@@ -85,23 +87,23 @@
 905 print "H H H                              H H H";
 906 print "H H H                              H H H";
 907 print "H H H                              H H H";
-908 print "H H H" spc(a) a1$ spc(a)          "H H H";
+908 print "H H H" spc(a) a1$ spc(b)          "H H H";
 909 print "H H H                              H H H";
 910 print "H H H                              H H H";
-911 print "H H H                              H H H";
 912 print "H H H                              H H H";
-913 print "H H H" spc(b) b1$ spc(b)          "H H H";
+913 print "H H H" spc(c) b1$ spc(d)          "H H H";
 914 print "H H H                              H H H";
 915 print "H H H                              H H H";
 916 print "H H H                              H H H";
 917 print "H H H                              H H H";
-918 print "H H H                              H H H";
-919 print "H H H                              H H H";
-920 print "H H HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEHEH H";
-921 print "H H HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEH";
-922 print "JCEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEK";
+918 print "H H HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEHEH H";
+919 print "H H HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEH";
+920 print "JCEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEK";
+921 print ""
+922 print "    press return to make a new label    "
 923 print ""
-924 print "  f1 bg    f2 fg    f3 beep    f4 exit  ";
+924 print "  f1 change wall color    f3 beep   "
+925 print "  f2 change text color    f4 reset  ";
 
 950 time$="000000": rem set the timer to 0
 960 get a$:if a$="" then gosub 1000 end: rem check_timer
