@@ -76,10 +76,10 @@
 830 input "what should the label read"; b1$
 840 print "sounds intriguing!"
 
-850 a=int(((40-10-len(a1$)) / 2) + 0.5)
-860 b=int(((40-10-len(a1$)) / 2) )
-870 c=int(((40-10-len(b1$)) / 2) + 0.5)
-880 d=int(((40-10-len(b1$)) / 2) )
+850 z=int(((40-10-len(a1$)) / 2) + 0.5)
+860 y=int(((40-10-len(a1$)) / 2) )
+870 x=int(((40-10-len(b1$)) / 2) + 0.5)
+880 w=int(((40-10-len(b1$)) / 2) )
 900 print chr$(147);: rem clear the screen
 901 print "UEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEDI  ";
 902 print "HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEH H H";
@@ -88,10 +88,10 @@
 905 print "H H H                              H H H";
 906 print "H H H                              H H H";
 907 print "H H H                              H H H";
-908 print "H H H" spc(a) a1$ spc(b)          "H H H";
+908 print "H H H" spc(z) a1$ spc(y)          "H H H";
 909 print "H H H                              H H H";
 912 print "H H H                              H H H";
-913 print "H H H" spc(c) b1$ spc(d)          "H H H";
+913 print "H H H" spc(x) b1$ spc(w)          "H H H";
 914 print "H H H                              H H H";
 915 print "H H H                              H H H";
 917 print "H H H                              H H H";
