@@ -89,12 +89,10 @@
 907 print "H H H                              H H H";
 908 print "H H H" spc(a) a1$ spc(b)          "H H H";
 909 print "H H H                              H H H";
-910 print "H H H                              H H H";
 912 print "H H H                              H H H";
 913 print "H H H" spc(c) b1$ spc(d)          "H H H";
 914 print "H H H                              H H H";
 915 print "H H H                              H H H";
-916 print "H H H                              H H H";
 917 print "H H H                              H H H";
 918 print "H H HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEHEH H";
 919 print "H H HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEH";
