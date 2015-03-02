@@ -31,19 +31,20 @@
 413 print "you get to be the exhibition designer today!"
 414 print ""
 415 print "press f1 to change the wall color"
-416 print "      f2 to change the text color"
-417 print "      f3 to beep"
-418 print "      f4 to reset"
+416 print "      f3 to change the text color"
+417 print "      f5 to beep"
+418 print "      f7 to reset"
 419 print ""
 420 print "press return to continue designing!"
 
-460 get a$:if a$="" then 460
-461 if a$=chr$(133) then gosub 500 end: rem change_color
-462 if a$=chr$(137) then gosub 600 end: goto 400: rem change_text
-463 if a$=chr$(134) then gosub 700 end: rem beep
-464 if a$=chr$(138) then 00 end: rem start
-465 if a$=chr$(13) then gosub 800 end
-466 goto 460
+460 poke 198,0: wait 198,1: rem wait_for_keypress
+461 get a$:if a$="" then 460
+462 if a$=chr$(133) then gosub 500 end: rem change_color
+463 if a$=chr$(134) then gosub 600 end: goto 400: rem change_text
+464 if a$=chr$(135) then gosub 700 end: rem beep
+465 if a$=chr$(136) then 00 end: rem start
+466 if a$=chr$(13) then gosub 800 end
+467 goto 460
 
 500 rem change_color:
 510 c=c + 1
@@ -100,15 +101,16 @@
 921 print ""
 922 print "    press return to make a new label    "
 923 print ""
-924 print "  f1 change wall color    f3 beep   "
-925 print "  f2 change text color    f4 reset  ";
+924 print "  f1 change wall color    f5 beep   "
+925 print "  f3 change text color    f7 reset  ";
 
 950 time$="000000": rem set the timer to 0
+955 poke 198,0: wait 198,1: rem wait_for_keypress
 960 get a$:if a$="" then gosub 1000 end: rem check_timer
 961 if a$=chr$(133) then gosub 500 end: rem change_color
-962 if a$=chr$(137) then gosub 600 end: goto 900: rem change_text
-963 if a$=chr$(134) then gosub 700 end: rem beep
-964 if a$=chr$(138) then 00 end: rem start
+962 if a$=chr$(134) then gosub 600 end: goto 900: rem change_text
+963 if a$=chr$(135) then gosub 700 end: rem beep
+964 if a$=chr$(136) then 00 end: rem start
 965 if a$=chr$(13) then print chr$(147);: gosub 800 end
 966 goto 960
 
