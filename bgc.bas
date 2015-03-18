@@ -51,14 +51,13 @@
 426 print ""
 
 
-460 poke 198,0: wait 198,1: rem wait_for_keypress
-461 get a$:if a$="" then 460
-462 if a$=chr$(133) then gosub 500 end: rem change_color
-463 if a$=chr$(134) then gosub 600 end: goto 400: rem change_text
-464 if a$=chr$(135) then gosub 700 end: rem beep
-465 if a$=chr$(136) then 00 end: rem start
-466 if a$=chr$(13) then gosub 800 end
-467 goto 460
+460 gosub 1100: rem get_keypress
+463 if a$=chr$(133) then gosub 500 end: rem change_color
+464 if a$=chr$(134) then gosub 600 end: goto 400: rem change_text
+465 if a$=chr$(135) then gosub 700 end: rem beep
+466 if a$=chr$(136) then 00 end: rem start
+467 if a$=chr$(13) then gosub 800 end
+470 goto 460
 
 500 rem change_color:
 510 c=c + 1
@@ -123,18 +122,24 @@
 924 print "  f1 change wall color    f5 beep   "
 925 print "  f3 change text color    f7 reset  ";
 
-950 time$="000000": rem set the timer to 0
-955 poke 198,0: wait 198,1: rem wait_for_keypress
-960 get a$:if a$="" then gosub 1000 end: rem check_timer
-961 if a$=chr$(133) then gosub 500 end: rem change_color
-962 if a$=chr$(134) then gosub 600 end: goto 900: rem change_text
-963 if a$=chr$(135) then gosub 700 end: rem beep
-964 if a$=chr$(136) then 00 end: rem start
-965 if a$=chr$(13) then print chr$(147);: gosub 800 end
-966 goto 960
+960 gosub 1100: rem get_keypress
+963 if a$=chr$(133) then gosub 500 end: rem change_color
+964 if a$=chr$(134) then gosub 600 end: goto 900: rem change_text
+965 if a$=chr$(135) then gosub 700 end: rem beep
+966 if a$=chr$(136) then 00 end: rem start
+967 if a$=chr$(13) then print chr$(147);: gosub 800 end
+970 goto 960
 
 1000 rem check_timer
-1010 if ti$ > "000020" then 00 end: rem start
+1010 if ti$ > "000060" then 00 end: rem start
 1020 return
+
+1100 rem get_keypress
+1110 a$=""
+1120 time$="000000": rem set the timer to 0
+1130 get a$:if a$="" then gosub 1000 end: rem check_timer
+1140 if a$="" then goto 1130
+1150 time$="000000": rem set the timer to 0
+1160 return
 
 end
