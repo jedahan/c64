@@ -84,10 +84,15 @@
 790 return
 
 800 rem change_description:
+801 a1$=""
+802 b1$=""
 805 print ""
 810 input "what is your favorite computer"; a1$
+811 if a1$ = "" then print "cmon, pick something!": goto 800
 820 print "great choice!"
+825 print ""
 830 input "why is it your favorite computer"; b1$
+831 if b1$ = "" then print "cmon, pick something!": goto 825
 840 print "sounds intriguing!"
 
 850 z=int(((40-10-len(a1$)) / 2) + 0.5)
