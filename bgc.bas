@@ -82,17 +82,25 @@
 780 poke sid+4,16: for t = 1 to 50: next: rem settings off plus delay
 790 return
 
-800 rem change_description:
+800 rem change_what:
 801 a1$=""
-802 b1$=""
-805 print ""
-810 input "what is your favorite computer"; a1$
-811 if a1$ = "" then print "cmon, pick something!": goto 800
-820 print "great choice!"
-825 print ""
-830 input "why is it your favorite computer"; b1$
-831 if b1$ = "" then print "cmon, pick something!": goto 825
-840 print "sounds intriguing!"
+802 print ""
+803 print "what is your favorite computer"
+804 gosub 1100: rem get_keypress
+805 input a1$
+806 a1$=a$+a1$
+807 if a$ = "" then print "cmon, pick something!": goto 800: rem change_what
+808 print "great choice!"
+
+820 rem change_why
+821 b1$=""
+822 print ""
+823 print "why is it your favorite computer"
+824 gosub 1100: rem get_keypress
+825 input ; b1$
+826 b1$=a$+b1$
+827 if b1$ = "" then print "cmon, pick something!": goto 820: rem change_why
+828 print "sounds intriguing!"
 
 850 z=int(((40-10-len(a1$)) / 2) + 0.5)
 860 y=int(((40-10-len(a1$)) / 2) )
