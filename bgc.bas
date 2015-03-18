@@ -33,21 +33,23 @@
 408 print "    about your favorite computer!      "
 409 print ""
 410 print ""
-411 print "press return to begin"
+411 print ""
 412 print ""
 413 print ""
 414 print ""
 415 print ""
 416 print ""
 417 print ""
-418 print "press f1 to change the wall color"
-419 print "      f3 to change the text color"
-420 print "      f5 to beep"
-421 print "      f7 to reset"
+418 print ""
+419 print ""
+420 print ""
+421 print "        press return to begin"
 422 print ""
 423 print ""
-424 print ""
-425 print ""
+424 print "  f1 change wall color    f5 beep   "
+425 print "  f3 change text color    f7 reset  ";
+426 print ""
+
 
 460 poke 198,0: wait 198,1: rem wait_for_keypress
 461 get a$:if a$="" then 460
@@ -83,9 +85,9 @@
 
 800 rem change_description:
 805 print ""
-810 input "what is your show title"; a1$
+810 input "what is your favorite computer"; a1$
 820 print "great choice!"
-830 input "what should the label read"; b1$
+830 input "why is it your favorite computer"; b1$
 840 print "sounds intriguing!"
 
 850 z=int(((40-10-len(a1$)) / 2) + 0.5)
