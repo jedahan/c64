@@ -87,7 +87,7 @@
 802 a1$=""
 803 b1$=""
 805 print ""
-810 print "what is your favorite computer"
+810 print "what's your favorite computer (<30 char)";
 811 input ""; a1$
 812 if a1$ = "" then print "cmon, pick something!": goto 800
 815 if len(a1$) > 30 then print "give a shorter name!": goto 805
