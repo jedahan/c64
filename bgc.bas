@@ -46,8 +46,8 @@
 421 print ""
 422 print ""
 423 print ""
-424 print "  f1 change wall color    f5 beep   "
-425 print "  f3 change text color    f7 reset  ";
+424 print ""
+425 print ""
 426 print ""
 
 
@@ -83,8 +83,9 @@
 790 return
 
 800 rem change_description:
-801 a1$=""
-802 b1$=""
+801 print chr$(147);: rem clear the screen
+802 a1$=""
+803 b1$=""
 805 print ""
 810 input "what is your favorite computer"; a1$
 811 if a1$ = "" then print "cmon, pick something!": goto 800
