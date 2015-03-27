@@ -87,12 +87,16 @@
 802 a1$=""
 803 b1$=""
 805 print ""
-810 input "what is your favorite computer"; a1$
-811 if a1$ = "" then print "cmon, pick something!": goto 800
+810 print "what is your favorite computer"
+811 input ""; a1$
+812 if a1$ = "" then print "cmon, pick something!": goto 800
+815 if len(a1$) > 30 then print "give a shorter name!": goto 805
 820 print "great choice!"
 825 print ""
-830 input "why is it your favorite computer"; b1$
-831 if b1$ = "" then print "cmon, pick something!": goto 825
+830 print "why is it your favorite"
+835 input ""; b1$
+836 if b1$ = "" then print "cmon, pick something!": goto 825
+837 if len(b1$) > 30 then print "give a shorter description!": goto 825
 840 print "sounds intriguing!"
 
 850 z=int(((40-10-len(a1$)) / 2) + 0.5)
