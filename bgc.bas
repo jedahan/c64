@@ -103,24 +103,25 @@
 860 y=int(((40-10-len(a1$)) / 2) )
 870 x=int(((40-10-len(b1$)) / 2) + 0.5)
 880 w=int(((40-10-len(b1$)) / 2) )
+885 p$=chr$(166)
 900 print chr$(147);: rem clear the screen
-901 print "UEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEDI  ";
-902 print "HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEH H H";
-903 print "H HEUEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEH H H";
-904 print "H H H                              H H H";
-905 print "H H H                              H H H";
-906 print "H H H                              H H H";
-907 print "H H H                              H H H";
-908 print "H H H" spc(z) a1$ spc(y)          "H H H";
-909 print "H H H                              H H H";
-912 print "H H H                              H H H";
-913 print "H H H" spc(x) b1$ spc(w)          "H H H";
-914 print "H H H                              H H H";
-915 print "H H H                              H H H";
-917 print "H H H                              H H H";
-918 print "H H HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEHEH H";
-919 print "H H HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEH";
-920 print "JCEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEK";
+901 print ""
+902 print spc(1)p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$spc(1);
+903 print " G                                    H ";
+904 print " G                                    H ";
+905 print " G                                    H ";
+906 print " G                                    H ";
+907 print " G                                    H ";
+908 print " G    " spc(z) a1$ spc(y)          "  H ";
+909 print " G                                    H ";
+912 print " G                                    H ";
+913 print " G    " spc(x) b1$ spc(w)          "  H ";
+914 print " G                                    H ";
+915 print " G                                    H ";
+917 print " G                                    H ";
+918 print " G                                    H ";
+919 print spc(1)p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$p$spc(1);
+920 print "";
 921 print ""
 922 print "    press return to make a new label    "
 923 print ""
