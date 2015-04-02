@@ -11,9 +11,10 @@
 
 100 rem prompt:
 110 prompt$=""
-120 input a1$, a2$
-130 if a1$ = "load ps" and a2$ = "8" then 300
-140 print "try load ps,8"
+120 input a1$
+130 if a1$ = "load ps" then 300
+135 if a1$ = "10 print" then gosub 1500: goto 00: rem ten_print
+140 print "type load ps"
 150 goto 100
 
 300 rem start_program:
@@ -148,4 +149,8 @@
 1150 time$="000000": rem set the timer to 0
 1160 return
 
+1500 rem ten_print
+1510 print chr$(205.5+rnd(1));
+1520 get a$:if a$<>"" then return
+1530 goto 1510
 end
