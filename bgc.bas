@@ -14,6 +14,7 @@
 120 input a1$
 130 if a1$ = "load ps" then 300
 135 if a1$ = "10 print" then gosub 1500: goto 00: rem ten_print
+136 if a1$ = "reset" then goto 00
 140 print "type load ps"
 150 goto 100
 
